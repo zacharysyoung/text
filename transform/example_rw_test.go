@@ -20,8 +20,8 @@ func ExampleNewReader() {
 		encLatin1 = charmap.ISO8859_1.NewEncoder()
 		decLatin1 = charmap.ISO8859_1.NewDecoder()
 
-		buf1 = &bytes.Buffer{}
-		buf2 = &bytes.Buffer{}
+		buf1 = new(bytes.Buffer)
+		buf2 = new(bytes.Buffer)
 	)
 
 	r := transform.NewReader(rUTF8, encLatin1)
@@ -55,7 +55,7 @@ func ExampleNewWriter_transcoding() {
 		decLatin1  = charmap.ISO8859_1.NewDecoder()
 		encUTF16BE = unicode.UTF16(unicode.BigEndian, unicode.IgnoreBOM).NewEncoder()
 
-		buf = &bytes.Buffer{}
+		buf = new(bytes.Buffer)
 	)
 
 	r := transform.NewReader(rLatin1, decLatin1)
