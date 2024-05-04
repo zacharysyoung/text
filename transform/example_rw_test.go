@@ -46,7 +46,7 @@ func ExampleNewReader() {
 //
 // This example uses an intermediate bytes.Buffer just to be able
 // to show the results of the transcoding; a more practical
-// example might have the writer wrap os.Stdout.
+// example might have the writer wrap a file, like os.Stdout.
 func ExampleNewWriter() {
 	var (
 		latin1  = []byte{116, 115, 99, 104, 252, 223} // tschüß as Latin1 bytes
