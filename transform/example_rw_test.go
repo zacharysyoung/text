@@ -49,7 +49,7 @@ func ExampleNewReader() {
 // example might have the writer wrap a file, like os.Stdout.
 func ExampleNewWriter_transcoding() {
 	var (
-		latin1  = []byte{116, 115, 99, 104, 252, 223} // tschüß as Latin1 bytes
+		latin1  = []byte{116, 115, 99, 104, 252, 223} // tschüß
 		rLatin1 = bytes.NewReader(latin1)
 
 		decLatin1  = charmap.ISO8859_1.NewDecoder()
